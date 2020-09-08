@@ -34,6 +34,10 @@ async function run() {
         //Fix U3D root permission error on CI environment.
         tl.setVariable('U3D_PASSWORD', '')
 
+        //u3d requires some environment variables set up to run correctly
+        tl.setVariable('LC_ALL', 'en_US.UTF-8')
+        tl.setVariable('LANG', 'en_US.UTF-8')
+
         tl.debug('Installing u3d gem...')
         let gemRunner: ToolRunner = tl.tool(tl.which('gem', true));
         gemRunner.arg(['install', 'u3d']);
@@ -43,9 +47,20 @@ async function run() {
         let u3dRunner: ToolRunner = tl.tool(tl.which('u3d', true));
         u3dRunner.arg(['install', unityVersion as string, '-p', 'Unity', 'ios']);
         await u3dRunner.exec()
+        
+        //on Mac, versions are installed under /Applications/Unity_$unityVersion
+        let unityPath = tl.resolve('/Applications', `Unity_${unityVersion}`)
 
-
-        tl.setResult(tl.TaskResult.Succeeded, 'Unity installed successfully!');
+        if (tl.exist(unityPath)){
+            let unityFiles = tl.ls('-R', [unityPath])
+            tl.debug('Unity version found! path: ' + unityPath)
+            unityFiles.forEach(file => { tl.debug(file) })
+            
+            tl.setVariable('unityEditorPath', unityPath)
+            tl.setResult(tl.TaskResult.Succeeded, 'Unity installed successfully!');
+        }else {
+            tl.setResult(tl.TaskResult.Failed, 'Unity not found! path: ' + unityPath)
+        }
 
     } catch (e) {
         if (e instanceof Error) {

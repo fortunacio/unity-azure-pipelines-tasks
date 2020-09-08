@@ -7,6 +7,7 @@ CI / CD for your projects.
 
 ## Included Build / Release Tasks
 
+- Unity Install
 - Unity Get Project Version
 - Unity Activate License
 - Unity Build
@@ -21,3 +22,6 @@ CI / CD for your projects.
 ## Contributions
 
 Contributions to the project are welcome. Please target your Pull Requests against the `master` branch.
+
+## Build 
+`tfx extension create --manifest-globs azure-devops-extension.json --rev-version`

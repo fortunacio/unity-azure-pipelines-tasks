@@ -1,0 +1,122 @@
+{
+  "id": "9482e1cb-8ec5-4704-8744-f856a6569fd8",
+  "name": "WololoGitCloneTask",
+  "friendlyName": "Git Clone Advanced",
+  "description": "Run git clone command with submodule support by Wololo.",
+  "category": "Azure Pipelines",
+  "visibility": [
+    "Build"
+  ],
+  "author": "Wololo",
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "Git Clone $(sourceControlEvent)",
+  "inputs": [
+    {
+      "name": "sourceControlEvent",
+      "type": "string",
+      "label": "This is the event that fired the build from Wololo (manual_build, push, pull_request or tag)",
+      "required" : true,
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "repositoryUrl",
+      "type": "string",
+      "label": "Git Repository URL",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "repositoryBranch",
+      "type": "string",
+      "label": "Git Repository branch name",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "outputPath",
+      "type": "string",
+      "label": "This is the destination folder path where the repository will be cloned",
+      "required": true,
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "checkoutSHA",
+      "type": "string",
+      "label": "Checkout SHA used when project is cloned by PUSH event.",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "infoWololoGitEmail",
+      "type": "string",
+      "label": "Wololo Git Email",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "infoWololoGitName",
+      "type": "string",
+      "label": "Wololo Git Name",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "repositoryTargetUrl",
+      "type": "string",
+      "label": "Git Repository URL required for pull request event",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "repositorySourceUrl",
+      "type": "string",
+      "label": "Git Repository URL required for pull request event",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "repositoryTargetBranch",
+      "type": "string",
+      "label": "Git Repository branch name required for pull request event",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "repositorySourceBranch",
+      "type": "string",
+      "label": "Git Repository branch name required for pull request event",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "repositoryTagBranch",
+      "type": "string",
+      "label": "Git Repository branch name required for tag event",
+      "defaultValue": "",
+      "helpMarkDown": ""
+    }
+  ],
+  "OutputVariables": [
+    {
+      "name": "unityEditorPath",
+      "description": "Path to the Unity editor."
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "git-clone.js",
+      "argumentFormat": ""
+    }
+  },
+  "messages": {
+    "WrongTriggerEvent": "The trigger event is incorrect.",
+    "ExecuteSuccess": "The Git Clone process completed successfully"
+  }
+}

@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "ec4067c0-3ff2-4803-9150-962251ee7c96",
-    "version": "2.7.12",
+    "version": "2.7.13",
     "name": "Wololo Unity Tools for Azure DevOps",
     "description": "The Unity Tools for Azure DevOps extension adds CI/CD tools for Unity 3D projects to your Azure DevOps orgaization.",
     "publisher": "Wololo",
@@ -76,6 +76,9 @@
         },
         {
             "path": "Tasks/UnityInstall/UnityInstallV1"
+        },
+        {
+            "path": "Tasks/GitClone/GitCloneV1"
         }
     ],
     "branding": {
@@ -155,6 +158,16 @@
             ],
             "properties": {
                 "name": "Tasks/UnityInstall"
+            }
+        },
+        {
+            "id": "custom-git-clone-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/GitClone"
             }
         }
     ]
