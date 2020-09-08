@@ -1,11 +1,11 @@
 {
     "manifestVersion": 1,
-    "id": "64e90d50-a9c0-11e8-a356-d3eab7857116",
-    "version": "2.7.2",
-    "name": "Unity Tools for Azure DevOps",
+    "id": "ec4067c0-3ff2-4803-9150-962251ee7c96",
+    "version": "2.7.12",
+    "name": "Wololo Unity Tools for Azure DevOps",
     "description": "The Unity Tools for Azure DevOps extension adds CI/CD tools for Unity 3D projects to your Azure DevOps orgaization.",
-    "publisher": "DinomiteStudios",
-    "public": true,
+    "publisher": "Wololo",
+    "public": false,
     "icons": {
         "default": "images/extensionIcon.png"
     },
@@ -23,7 +23,7 @@
         }
     ],
     "categories": [
-        "Build and release"
+        "Azure Pipelines"
     ],
     "tags": [
         "Unity",
@@ -47,10 +47,6 @@
         "support": {
             "uri": "https://github.com/Dinomite-Studios/unity-azure-pipelines-tasks/issues"
         }
-    },
-    "repository": {
-        "type": "git",
-        "uri": "https://github.com/Dinomite-Studios/unity-azure-pipelines-tasks"
     },
     "files": [
         {
@@ -77,6 +73,9 @@
         },
         {
             "path": "Tasks/UnityCMD/UnityCMDV1"
+        },
+        {
+            "path": "Tasks/UnityInstall/UnityInstallV1"
         }
     ],
     "branding": {
@@ -146,6 +145,16 @@
             ],
             "properties": {
                 "name": "Tasks/UnityCMD"
+            }
+        },
+        {
+            "id": "custom-unity-install-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/UnityInstall"
             }
         }
     ]

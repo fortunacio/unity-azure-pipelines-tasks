@@ -1,6 +1,6 @@
 {
-  "id": "f357416a-9646-4cd6-9d96-e2f2a9574ce6",
-  "name": "UnityCMDTask",
+  "id": "46980f70-ea02-4dcc-8611-dae75ab9aba5",
+  "name": "WololoUnityCMDTask",
   "friendlyName": "Unity CMD",
   "description": "Execute a Unity editor via command line.",
   "helpMarkDown": "Executes a Unity editor via command line. [More Information](https://github.com/Dinomite-Studios/unity-azure-pipelines-tasks)",
@@ -8,7 +8,7 @@
   "visibility": [
     "Build"
   ],
-  "author": "Dinomite Studios",
+  "author": "Wololo",
   "version": {
     "Major": "1",
     "Minor": "0",

@@ -1,6 +1,6 @@
 {
-  "id": "85e57e6f-cb59-4d1d-979f-dd830b51f2fa",
-  "name": "UnityTestTask",
+  "id": "4181bba0-f141-49d9-878b-ea3ff19aeb54",
+  "name": "WololoUnityTestTask",
   "friendlyName": "Unity Test",
   "description": "Tests a Unity project and produce the results in NUnit compatible files.",
   "helpMarkDown": "Tests a Unity project and produce the results in NUnit compatible files. [More Information](https://github.com/Dinomite-Studios/unity-azure-pipelines-tasks)",
@@ -8,7 +8,7 @@
   "visibility": [
     "Build"
   ],
-  "author": "Dinomite Studios",
+  "author": "Wololo",
   "version": {
     "Major": "1",
     "Minor": "2",

@@ -1,6 +1,6 @@
 {
-  "id": "38ec98bf-601a-4390-9f2e-23d43dd6dbba",
-  "name": "UnityGetProjectVersionTask",
+  "id": "5ccc285e-59ce-4db0-9914-f716f5748dfa",
+  "name": "WololoUnityGetProjectVersionTask",
   "friendlyName": "Unity Get Project Version",
   "description": "Gets the project version of a Unity project.",
   "helpMarkDown": "Gets the project version of a Unity project. [More Information](https://github.com/Dinomite-Studios/unity-azure-pipelines-tasks)",
@@ -8,7 +8,7 @@
   "visibility": [
     "Build"
   ],
-  "author": "Dinomite Studios",
+  "author": "Wololo",
   "version": {
     "Major": "1",
     "Minor": "0",

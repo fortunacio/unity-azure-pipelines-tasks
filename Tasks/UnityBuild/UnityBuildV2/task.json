@@ -1,6 +1,6 @@
 {
-  "id": "64e90d50-a9c0-11e8-a356-d3eab7857116",
-  "name": "UnityBuildTask",
+  "id": "7e524feb-833e-439b-9d4e-1e8f1e07830c",
+  "name": "WololoUnityBuildTask",
   "friendlyName": "Unity Build",
   "description": "Build a Unity project and get the exported output files.",
   "helpMarkDown": "Builds a Unity project to supported build target platforms. [More Information](https://github.com/Dinomite-Studios/unity-azure-pipelines-tasks)",
@@ -8,7 +8,7 @@
   "visibility": [
     "Build"
   ],
-  "author": "Dinomite Studios",
+  "author": "Wololo",
   "version": {
     "Major": "2",
     "Minor": "5",

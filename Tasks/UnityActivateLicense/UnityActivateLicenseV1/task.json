@@ -1,6 +1,6 @@
 {
-  "id": "13159b9a-b7ba-4977-922c-2b5cb63c90df",
-  "name": "UnityActivateLicenseTask",
+  "id": "70074fed-b2c3-4291-996b-2030ea617dc9",
+  "name": "WololoUnityActivateLicenseTask",
   "friendlyName": "Unity Activate License",
   "description": "Activates a Unity license on the agent.",
   "helpMarkDown": "Activates a Unity license on the agent. [More Information](https://github.com/Dinomite-Studios/unity-azure-pipelines-tasks)",
@@ -8,7 +8,7 @@
   "visibility": [
     "Build"
   ],
-  "author": "Dinomite Studios",
+  "author": "Wololo",
   "version": {
     "Major": "1",
     "Minor": "0",
